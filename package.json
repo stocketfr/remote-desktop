@@ -2,6 +2,7 @@
   "name": "@stocket/remote-desktop",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.28.0",
   "type": "module",
   "scripts": {
     "dev": "tauri dev",
@@ -12,7 +13,7 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2.10.1",
-    "oxlint": "^1.17.0",
-    "vitest": "^4.1.1"
+    "oxlint": "catalog:",
+    "vitest": "catalog:"
   }
 }
