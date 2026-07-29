@@ -6,47 +6,26 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   lint-and-test:
-    runs-on: blacksmith-2vcpu-ubuntu-2404
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
         with:
-          path: remote-desktop
-
-      - uses: actions/checkout@v4
-        with:
-          repository: stocket/packages
-          path: packages
-
-      - name: Create workspace root
-        run: |
-          cat > package.json << 'EOF'
-          {
-            "private": true,
-            "name": "stocket-workspace"
-          }
-          EOF
-          cat > pnpm-workspace.yaml << 'EOF'
-          packages:
-            - 'packages/*'
-            - 'remote-desktop'
-          EOF
+          persist-credentials: false
 
       - uses: pnpm/action-setup@v4
         with:
-          version: 10
+          version: 10.28.0
 
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: pnpm
 
-      - run: pnpm install --no-frozen-lockfile
-
-      - name: Lint
-        working-directory: remote-desktop
-        run: pnpm lint
-
-      - name: Test
-        working-directory: remote-desktop
-        run: pnpm test
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm test
