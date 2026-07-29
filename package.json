@@ -12,8 +12,8 @@
     "lint:fix": "oxlint --fix src-ui"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2.10.1",
-    "oxlint": "catalog:",
-    "vitest": "catalog:"
+    "@tauri-apps/cli": "2.11.2",
+    "oxlint": "1.68.0",
+    "vitest": "4.1.8"
   }
 }

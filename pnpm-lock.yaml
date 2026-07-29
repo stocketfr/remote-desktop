@@ -4,32 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-catalogs:
-  default:
-    oxlint:
-      specifier: ^1.59.0
-      version: 1.68.0
-    vitest:
-      specifier: ^4.1.1
-      version: 4.1.8
-
-overrides:
-  esbuild: 0.25.0
-  import-in-the-middle: 1.15.0
-  require-in-the-middle: 7.5.2
-
 importers:
 
   .:
     devDependencies:
       '@tauri-apps/cli':
-        specifier: ^2.10.1
+        specifier: 2.11.2
         version: 2.11.2
       oxlint:
-        specifier: 'catalog:'
+        specifier: 1.68.0
         version: 1.68.0
       vitest:
-        specifier: 'catalog:'
+        specifier: 4.1.8
         version: 4.1.8(vite@8.0.16)
 
 packages:
@@ -590,7 +576,7 @@ packages:
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
       '@vitejs/devtools': ^0.1.18
-      esbuild: 0.25.0
+      esbuild: ^0.27.0 || ^0.28.0
       jiti: '>=1.21.0'
       less: ^4.0.0
       sass: ^1.70.0
