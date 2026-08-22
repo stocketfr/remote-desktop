@@ -19,3 +19,11 @@ The workspace no longer checks out or links the legacy shared-packages repositor
 ## Releases
 
 Automated desktop releases are disabled. The previous workflow assembled a desktop application from the legacy `stocketfr/frontend` polyrepo and could not represent the canonical hosted-v1 architecture. Do not tag or publish a desktop release until the post-v1 architecture, signing, update, and rollback contracts in issues #3–#5 are resolved through a new reviewed workflow.
+
+## Licensing
+
+This repository is proprietary and all rights reserved to Maximilian
+(`maximilianpw`). Repository visibility does not grant permission to use,
+modify, redistribute, or host its source or assets. See [LICENSE](LICENSE) and
+[NOTICE](NOTICE). Unsolicited external code, documentation, design, and asset
+contributions are not accepted without a written contribution agreement.
